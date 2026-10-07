@@ -1,0 +1,6 @@
+{
+  "name": "Shapes & Symmetry: Teacher Board",
+  "description": "Cambridge Mathematics Stage 7, Unit 8 interactive digital whiteboard and teacher presentation board for Shapes & Symmetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
