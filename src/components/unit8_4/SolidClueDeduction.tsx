@@ -78,7 +78,7 @@ export const SolidClueDeduction: React.FC = () => {
                       : 'bg-slate-50 border-dashed border-slate-200 text-slate-400 font-bold text-base'
                   }`}
                 >
-                  {isRevealed ? clue.text : `Clue ${idx + 1}: Tap "Reveal Next Clue"`}
+                  {isRevealed ? clue.text : `Clue ${idx + 1}`}
                 </div>
               );
             })}
@@ -94,7 +94,7 @@ export const SolidClueDeduction: React.FC = () => {
                     : 'bg-purple-600 hover:bg-purple-700 text-white shadow-md shadow-purple-600/30'
                 }`}
               >
-                <span>Reveal Next Clue</span>
+                <span>Next Clue</span>
                 <ChevronRight className="w-5 h-5" />
               </button>
 
@@ -113,11 +113,11 @@ export const SolidClueDeduction: React.FC = () => {
         <div className="col-span-12 md:col-span-7 bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-black uppercase text-slate-500">
-              Solids Filter ({matchingSolids.length} remaining):
+              Matching Solids ({matchingSolids.length} remaining):
             </span>
             {matchingSolids.length === 1 && (
               <span className="text-xs font-black uppercase bg-emerald-100 text-emerald-800 px-3 py-1 rounded-xl flex items-center gap-1 animate-in fade-in">
-                <CheckCircle2 className="w-4 h-4" /> Solved! Exactly 1 Match
+                <CheckCircle2 className="w-4 h-4" /> Exactly 1 Match
               </span>
             )}
           </div>
@@ -153,7 +153,7 @@ export const SolidClueDeduction: React.FC = () => {
               <Sparkles className="w-7 h-7 text-emerald-600 shrink-0" />
               <div>
                 <span className="text-lg font-black">
-                  Identified Solid: {matchingSolids[0].name}!
+                  Identified Solid: {matchingSolids[0].name}
                 </span>
                 <p className="text-sm font-semibold text-emerald-800">
                   {matchingSolids[0].faceDescription}
@@ -165,7 +165,7 @@ export const SolidClueDeduction: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-lg">
-        Classroom method: Teach students to eliminate non-qualifying shapes with each successive clue!
+        <span>Each clue eliminates solids that do not match, narrowing the possibilities to a single solid.</span>
       </div>
     </div>
   );

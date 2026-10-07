@@ -100,7 +100,7 @@ export const SolidExplorer84: React.FC<SolidExplorer84Props> = ({ isInteractMode
       </div>
 
       <div className="p-3 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-base mt-2">
-        Tip: Switch to Interact mode anytime to spin and examine the 3D solid from all angles!
+        <span>A prism has identical polygon ends, while a pyramid has a polygon base meeting at an apex.</span>
       </div>
     </div>
   );

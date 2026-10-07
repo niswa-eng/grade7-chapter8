@@ -55,12 +55,12 @@ export const CongruentDefinition: React.FC = () => {
 
         {/* Mathematical Notation & Word note */}
         <div className="p-4 rounded-xl bg-slate-100 flex items-center justify-between text-slate-700 font-bold text-base">
-          <span>In Cambridge Mathematics, always use the word <strong>"congruent"</strong> rather than just writing the symbol ≅.</span>
+          <span>Always use the full word <strong>congruent</strong> when stating that two shapes have identical shape and size.</span>
         </div>
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Reminder: Position and orientation do NOT matter! A flipped or turned shape can still be congruent.
+        <span>Position and orientation do not affect congruence. A shape that is turned, slid, or flipped remains congruent.</span>
       </div>
     </div>
   );

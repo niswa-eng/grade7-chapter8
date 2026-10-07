@@ -22,7 +22,7 @@ export const SolidsSummaryTable: React.FC<SolidsSummaryTableProps> = ({ isIntera
           Summary Table of 3D Solids
         </h2>
         <p className="text-2xl font-bold text-slate-700 leading-snug">
-          Tap any row to preview the solid in the 3D viewer on the right!
+          Key properties of prisms, pyramids, and curved solids.
         </p>
       </div>
 
@@ -77,7 +77,7 @@ export const SolidsSummaryTable: React.FC<SolidsSummaryTableProps> = ({ isIntera
       </div>
 
       <div className="p-3 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-base mt-2">
-        Remember: A vertex is a corner point. A sphere has 0 edges and 0 vertices!
+        <span>A vertex is a corner point where edges meet. A sphere has 0 edges and 0 vertices.</span>
       </div>
     </div>
   );

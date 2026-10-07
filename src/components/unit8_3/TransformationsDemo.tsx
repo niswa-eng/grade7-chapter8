@@ -208,13 +208,13 @@ export const TransformationsDemo: React.FC = () => {
               className="flex-1 h-16 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xl flex items-center justify-center gap-2 shadow-lg active:scale-95"
             >
               <Play className="w-6 h-6 fill-current" />
-              <span>Play Transformation</span>
+              <span>Play</span>
             </button>
 
             <button
               onClick={handleReset}
               className="w-16 h-16 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold flex items-center justify-center active:scale-95 border-2 border-slate-200"
-              title="Reset view"
+              title="Reset"
             >
               <RotateCcw className="w-6 h-6" />
             </button>
@@ -223,7 +223,7 @@ export const TransformationsDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Cambridge key takeaway: "Turn it, slide it, or flip it — if it still fits, it is CONGRUENT!"
+        <span>Turn it, slide it, or flip it — if it still fits exactly, it is CONGRUENT.</span>
       </div>
     </div>
   );

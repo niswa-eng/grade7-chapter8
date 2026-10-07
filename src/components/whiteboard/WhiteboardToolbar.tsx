@@ -121,24 +121,18 @@ export const WhiteboardToolbar: React.FC<WhiteboardToolbarProps> = ({
               ? 'bg-amber-400 text-slate-950 border-amber-500 ring-4 ring-amber-300/50 scale-105'
               : 'bg-white text-slate-800 border-slate-300 hover:bg-slate-50'
           }`}
-          title={isDrawMode ? 'Draw Mode Active: Handwrite on screen' : 'Interact Mode Active: Tap and drag content'}
+          title={isDrawMode ? 'Draw' : 'Interact'}
           aria-label={isDrawMode ? 'Switch to Interact Mode' : 'Switch to Draw Mode'}
         >
           {isDrawMode ? (
             <>
               <Pencil className="w-8 h-8 text-slate-950 stroke-[2.5]" />
-              <div className="flex flex-col text-left">
-                <span className="text-lg leading-tight font-extrabold uppercase tracking-wide">DRAW MODE</span>
-                <span className="text-xs font-semibold text-slate-700">Writing on canvas</span>
-              </div>
+              <span className="text-lg leading-tight font-extrabold uppercase tracking-wide">DRAW</span>
             </>
           ) : (
             <>
               <Hand className="w-8 h-8 text-blue-600 stroke-[2.5]" />
-              <div className="flex flex-col text-left">
-                <span className="text-lg leading-tight font-extrabold uppercase tracking-wide text-blue-900">INTERACT</span>
-                <span className="text-xs font-semibold text-slate-500">Tap content underneath</span>
-              </div>
+              <span className="text-lg leading-tight font-extrabold uppercase tracking-wide text-blue-900">INTERACT</span>
             </>
           )}
         </button>
@@ -230,7 +224,7 @@ export const WhiteboardToolbar: React.FC<WhiteboardToolbarProps> = ({
                     ? 'bg-rose-600 text-white shadow-lg shadow-rose-500/30 scale-105'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
-                title="Stroke Eraser (Tap or drag over ink)"
+                title="Eraser"
               >
                 <Eraser className="w-6 h-6" />
                 <span className="text-[11px] font-bold mt-0.5">Eraser</span>
@@ -249,7 +243,7 @@ export const WhiteboardToolbar: React.FC<WhiteboardToolbarProps> = ({
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
-                title="Straight Line (Snaps to horizontal/vertical)"
+                title="Straight Line"
               >
                 <Minus className="w-5 h-5 stroke-[3]" />
                 <span className="text-[10px] font-bold">Line</span>
@@ -265,7 +259,7 @@ export const WhiteboardToolbar: React.FC<WhiteboardToolbarProps> = ({
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
-                title="Circle (Drag outward from centre)"
+                title="Circle"
               >
                 <Circle className="w-5 h-5 stroke-[2.5]" />
                 <span className="text-[10px] font-bold">Circle</span>

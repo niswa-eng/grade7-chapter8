@@ -176,7 +176,7 @@ export const CircleBuildDemo: React.FC = () => {
           {/* Interactive controls for Stage 4 (Chord) or Stage 5 (Tangent) */}
           {currentStage === 4 && (
             <div className="w-full mt-3 p-3 bg-purple-50 rounded-2xl border border-purple-200 flex items-center justify-between">
-              <span className="text-xs font-black text-purple-900">Draggable Chord Slider:</span>
+              <span className="text-xs font-black text-purple-900">Chord Position:</span>
               <input
                 type="range"
                 min="0"
@@ -199,7 +199,7 @@ export const CircleBuildDemo: React.FC = () => {
 
           {currentStage === 5 && (
             <div className="w-full mt-3 p-3 bg-red-50 rounded-2xl border border-red-200 flex items-center justify-between">
-              <span className="text-xs font-black text-red-900">Slide Tangent Around Circle:</span>
+              <span className="text-xs font-black text-red-900">Tangent Angle:</span>
               <input
                 type="range"
                 min="0"
@@ -219,7 +219,7 @@ export const CircleBuildDemo: React.FC = () => {
           <div className="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-lg">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-black uppercase px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
-                Step {currentStage + 1} of 6
+                Part {currentStage + 1} of 6
               </span>
             </div>
             <h3 className="text-3xl font-black text-slate-900 mb-3" style={{ color: stages[currentStage].color }}>
@@ -269,7 +269,7 @@ export const CircleBuildDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Cambridge rule: Diameter = 2 × radius. The diameter is the longest chord that can be drawn in any circle!
+        <span>Diameter = 2 × radius. The diameter is the longest chord in any circle.</span>
       </div>
     </div>
   );

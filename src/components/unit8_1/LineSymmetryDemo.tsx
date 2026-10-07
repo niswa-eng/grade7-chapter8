@@ -219,7 +219,7 @@ export const LineSymmetryDemo: React.FC = () => {
         {/* Controls Panel */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
           <span className="text-sm font-extrabold uppercase tracking-wider text-slate-500">
-            Choose Line to Test:
+            Lines to Test:
           </span>
 
           <div className="grid grid-cols-1 gap-2.5">
@@ -275,7 +275,7 @@ export const LineSymmetryDemo: React.FC = () => {
             <div>
               <div className="flex justify-between text-xs font-black text-slate-500 uppercase mb-1">
                 <span>Flat (0%)</span>
-                <span>Fold progress: {Math.round(foldProgress * 100)}%</span>
+                <span>Fold: {Math.round(foldProgress * 100)}%</span>
                 <span>Folded (100%)</span>
               </div>
               <input
@@ -295,9 +295,8 @@ export const LineSymmetryDemo: React.FC = () => {
         </div>
       </div>
 
-      {/* Teacher Teaching Note */}
       <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-between text-amber-950 font-bold text-lg">
-        <span>Teaching point: A line of symmetry can be vertical, horizontal, or diagonal. The fold must match completely!</span>
+        <span>A line of symmetry can be vertical, horizontal, or diagonal. When folded, the two halves must match completely.</span>
       </div>
     </div>
   );

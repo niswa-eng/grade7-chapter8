@@ -96,7 +96,7 @@ export const FindingLinesDemo: React.FC = () => {
           Testing Candidate Lines of Symmetry
         </h2>
         <p className="text-2xl font-bold text-slate-700 leading-snug">
-          Never assume a line is a line of symmetry without testing! Tap candidate lines below to run the fold test.
+          Testing candidate lines of symmetry using the fold test.
         </p>
       </div>
 
@@ -198,7 +198,7 @@ export const FindingLinesDemo: React.FC = () => {
           {/* Shape Selector */}
           <div>
             <span className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2 block">
-              Choose Shape:
+              Shapes:
             </span>
             <div className="grid grid-cols-3 gap-2">
               <button
@@ -243,7 +243,7 @@ export const FindingLinesDemo: React.FC = () => {
           {/* Candidate Lines to Test */}
           <div>
             <span className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2 block">
-              Candidate Lines to Test:
+              Lines to Test:
             </span>
             <div className="space-y-2">
               {currentLines.map((line) => (
@@ -287,7 +287,7 @@ export const FindingLinesDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 font-bold text-lg">
-        Demonstration tool: The teacher taps lines and folds to prove why diagonal lines on a rectangle fail!
+        <span>A line of symmetry must divide a shape into two parts that fold exactly onto each other.</span>
       </div>
     </div>
   );

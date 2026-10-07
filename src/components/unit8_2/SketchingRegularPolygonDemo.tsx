@@ -120,7 +120,7 @@ export const SketchingRegularPolygonDemo: React.FC = () => {
               }`}
             >
               {showProtractor ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              <span>{showProtractor ? 'Hide Protractor Overlay' : 'Show Protractor Overlay'}</span>
+              <span>{showProtractor ? 'Hide Protractor' : 'Show Protractor'}</span>
             </button>
           </div>
         </div>
@@ -193,7 +193,7 @@ export const SketchingRegularPolygonDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Classroom note: For a regular hexagon, the distance between neighboring points is exactly equal to the radius of the circle!
+        <span>For a regular hexagon, the distance between neighbouring vertices is exactly equal to the radius of the circle.</span>
       </div>
     </div>
   );

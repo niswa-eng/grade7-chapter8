@@ -14,8 +14,8 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
       <div className="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl border-2 border-slate-200 animate-in fade-in zoom-in-95 duration-150">
         <div className="flex items-center justify-between pb-4 border-b border-slate-200">
           <div>
-            <h2 className="text-3xl font-extrabold text-slate-900">Teacher Board Guide</h2>
-            <p className="text-slate-500 font-semibold text-base">Interactive Flat Panel (IFP) &amp; Tablet Whiteboard</p>
+            <h2 className="text-3xl font-extrabold text-slate-900">Whiteboard &amp; Navigation Guide</h2>
+            <p className="text-slate-500 font-semibold text-base">Interactive Whiteboard &amp; Touch Controls</p>
           </div>
           <button
             onClick={onClose}
@@ -74,7 +74,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="h-14 px-8 rounded-2xl bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 active:scale-95 shadow-md"
           >
-            Got it, Let's Teach!
+            Close Guide
           </button>
         </div>
       </div>

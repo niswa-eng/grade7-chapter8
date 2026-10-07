@@ -69,10 +69,7 @@ export const DimensionsDemo: React.FC = () => {
         {/* Controls Column */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
           <div className="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-md">
-            <h3 className="text-2xl font-black text-slate-900 mb-2">Pop-Up Animation</h3>
-            <p className="text-slate-600 font-bold text-base mb-6">
-              Watch a flat square pop out of the screen into the third dimension to form a cube.
-            </p>
+            <h3 className="text-2xl font-black text-slate-900 mb-6">Dimension Comparison</h3>
 
             <div className="flex items-center gap-3">
               <button
@@ -80,7 +77,7 @@ export const DimensionsDemo: React.FC = () => {
                 className="flex-1 h-16 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-black text-xl flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30 active:scale-95"
               >
                 <ArrowUpRight className="w-7 h-7 stroke-[3]" />
-                <span>{isExtruded ? 'Flatten to 2D' : 'Pop Up to 3D Solid'}</span>
+                <span>{isExtruded ? 'Flatten (2D)' : 'Extrude (3D)'}</span>
               </button>
 
               <button
@@ -105,7 +102,7 @@ export const DimensionsDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-lg">
-        Classroom definition: 3D shapes are called solids because they occupy real physical space!
+        <span>3D shapes are called solids because they occupy three-dimensional space.</span>
       </div>
     </div>
   );

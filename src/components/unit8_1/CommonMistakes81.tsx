@@ -137,7 +137,7 @@ export const CommonMistakes81: React.FC = () => {
               className="h-14 px-6 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-lg flex items-center gap-2 shadow-md active:scale-95"
             >
               <Play className="w-5 h-5 fill-current" />
-              <span>{isFolded ? 'Reset View' : 'Demonstrate Failure'}</span>
+              <span>{isFolded ? 'Reset' : 'Fold'}</span>
             </button>
           </div>
         </div>
@@ -145,7 +145,7 @@ export const CommonMistakes81: React.FC = () => {
         {/* Mistakes Selector Column */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Select Misconception:
+            Common Mistakes:
           </span>
           {mistakes.map((m) => (
             <button
@@ -174,7 +174,7 @@ export const CommonMistakes81: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 font-bold text-lg">
-        Teacher prompt: "Ask the class: if you cut out the rectangle with scissors and fold across the diagonal, why does the point stick out?"
+        <span>A diagonal divides a rectangle into two equal triangles, but folding across it does not produce matching halves.</span>
       </div>
     </div>
   );

@@ -118,7 +118,7 @@ export const CorrespondingPartsDemo: React.FC = () => {
         {/* Picker Buttons */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-2.5">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Tap a part to highlight matching pairs:
+            Matching Pairs:
           </span>
           {pairs.map((p) => {
             const isSel = p.id === selectedElement;
@@ -146,7 +146,7 @@ export const CorrespondingPartsDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Worked example: The teacher writes measurements on the whiteboard and asks students to find the matching value on the other triangle!
+        <span>If Triangle ABC is congruent to Triangle PQR, each side and angle in ABC equals its corresponding part in PQR.</span>
       </div>
     </div>
   );

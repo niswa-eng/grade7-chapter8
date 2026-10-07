@@ -79,14 +79,14 @@ export const NonExamples83: React.FC = () => {
             className="mt-4 h-12 px-6 rounded-2xl bg-slate-900 text-white font-black text-sm flex items-center gap-2 active:scale-95 shadow-md"
           >
             <Layers className="w-4 h-4" />
-            <span>{isOverlaying ? 'Separate Shapes' : 'Test Overlay Fit'}</span>
+            <span>{isOverlaying ? 'Separate' : 'Overlay'}</span>
           </button>
         </div>
 
         {/* Case Selector */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Select Counterexample:
+            Counterexamples:
           </span>
 
           <button
@@ -143,7 +143,7 @@ export const NonExamples83: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Vocabulary note: "Similar" means same shape but different size (e.g. photos scaled up). Congruent requires both shape and size to be identical!
+        <span>"Similar" means same shape but different size. Congruent requires both shape and size to be identical.</span>
       </div>
     </div>
   );

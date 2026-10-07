@@ -119,7 +119,7 @@ export const CircleSummarySlide: React.FC = () => {
           Parts of a Circle Summary
         </h2>
         <p className="text-2xl font-bold text-slate-700 leading-snug">
-          Tap any of the 6 parts on the right to highlight it on the diagram.
+          The six fundamental features of a circle.
         </p>
       </div>
 
@@ -160,7 +160,7 @@ export const CircleSummarySlide: React.FC = () => {
         {/* 6 Part Cards */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-2.5">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Tap a part to highlight on circle:
+            Circle Features:
           </span>
           {parts.map((p) => {
             const isSel = p.id === highlightedId;
@@ -189,7 +189,7 @@ export const CircleSummarySlide: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Classroom note: Six key circle terms to master in Cambridge Stage 7!
+        <span>Every point on the circumference is equidistant from the centre O.</span>
       </div>
     </div>
   );

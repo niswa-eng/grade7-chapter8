@@ -70,7 +70,7 @@ export const CongruenceChecklist: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Classroom prompt: "If two triangles have sides 3 cm, 4 cm, 5 cm and the other has 3 cm, 4 cm, 5 cm, are they congruent? Yes!"
+        <span>If two shapes have all matching sides and angles equal, they are congruent regardless of orientation.</span>
       </div>
     </div>
   );

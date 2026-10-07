@@ -215,7 +215,7 @@ export const CubeElementsDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-lg">
-        Cambridge summary on a Cube: Faces = 6, Edges = 12, Vertices = 8!
+        <span>Cube properties: 6 Faces, 12 Edges, 8 Vertices.</span>
       </div>
     </div>
   );

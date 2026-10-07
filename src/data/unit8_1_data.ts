@@ -226,7 +226,7 @@ export const unit8_1_practice: PracticeQuestion[] = [
     number: 4,
     title: 'Diagonal of a Parallelogram Misconception',
     prompt: 'A student says: "A diagonal of this parallelogram is a line of symmetry." Explain why the student is wrong.',
-    subPrompt: 'Draw the parallelogram, draw the diagonal, and demonstrate why folding across it does NOT produce overlapping halves.',
+    subPrompt: 'Draw the parallelogram, draw the diagonal, and show why folding across it does NOT produce overlapping halves.',
     diagramType: 'parallelogram-diagonal',
     defaultGrid: 'grid'
   },

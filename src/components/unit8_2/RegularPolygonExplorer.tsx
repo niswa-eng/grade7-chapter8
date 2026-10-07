@@ -116,7 +116,7 @@ export const RegularPolygonExplorer: React.FC = () => {
           {/* Quick n Buttons */}
           <div>
             <span className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2 block">
-              Quick Sides Selection:
+              Sides (n):
             </span>
             <div className="flex gap-2 flex-wrap">
               {[3, 4, 5, 6, 8, 10].map((num) => (
@@ -179,7 +179,7 @@ export const RegularPolygonExplorer: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Cambridge note: For n=7 (heptagon) and n=9 (nonagon), the interior angle is not an integer so we study sides, lines, and order!
+        <span>For a regular heptagon (n = 7) and nonagon (n = 9), the interior angle is not a whole number.</span>
       </div>
     </div>
   );

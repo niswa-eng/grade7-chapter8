@@ -49,7 +49,7 @@ export const PolygonsSummaryTable: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Cambridge summary rule: In every regular polygon, Sides = Angles = Lines of Symmetry = Order of Rotational Symmetry = n!
+        <span>In every regular polygon: Sides = Angles = Lines of Symmetry = Order of Rotational Symmetry = n.</span>
       </div>
     </div>
   );

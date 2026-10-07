@@ -155,7 +155,7 @@ export const PolygonDefinitionDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Two-test check: 1) Is it closed? 2) Are all sides straight lines? If any side is curved, it is not a polygon.
+        <span>A polygon must be closed and bounded only by straight sides. If any side is curved, it is not a polygon.</span>
       </div>
     </div>
   );

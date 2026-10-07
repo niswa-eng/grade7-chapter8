@@ -110,7 +110,7 @@ export const ViewsConcept84: React.FC<ViewsConcept84Props> = ({ isInteractMode }
       </div>
 
       <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-lg">
-        Cambridge rule: "Plan view" is the official mathematical term for the top view (looking directly from above)!
+        <span>Plan view is the mathematical term for the view looking directly from above.</span>
       </div>
     </div>
   );

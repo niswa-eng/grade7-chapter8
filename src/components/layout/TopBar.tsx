@@ -137,8 +137,8 @@ export const TopBar: React.FC<TopBarProps> = ({
         <button
           onClick={onOpenHelp}
           className="h-14 w-14 rounded-2xl bg-slate-100 hover:bg-slate-200 border-2 border-slate-200 flex items-center justify-center text-slate-700 transition-all active:scale-95"
-          title="Teacher Board Guide"
-          aria-label="Help Guide"
+          title="Guide"
+          aria-label="Guide"
         >
           <HelpCircle className="w-6 h-6" />
         </button>

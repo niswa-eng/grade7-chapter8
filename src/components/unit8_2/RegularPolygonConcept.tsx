@@ -91,7 +91,7 @@ export const RegularPolygonConcept: React.FC = () => {
         {/* Comparison Selector */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Compare Shapes:
+            Examples &amp; Non-Examples:
           </span>
 
           <button
@@ -116,7 +116,7 @@ export const RegularPolygonConcept: React.FC = () => {
                 : 'bg-white text-slate-800 border-slate-200 hover:bg-slate-50'
             }`}
           >
-            <div className="text-lg">Rectangle (Counterexample 1)</div>
+            <div className="text-lg">Rectangle (Not Regular)</div>
             <p className={`text-xs mt-1 ${selectedDemo === 'rect-nonreg' ? 'text-rose-100' : 'text-slate-500'}`}>
               ✓ Angles all equal, but ✗ sides are different lengths.
             </p>
@@ -130,7 +130,7 @@ export const RegularPolygonConcept: React.FC = () => {
                 : 'bg-white text-slate-800 border-slate-200 hover:bg-slate-50'
             }`}
           >
-            <div className="text-lg">Rhombus (Counterexample 2)</div>
+            <div className="text-lg">Rhombus (Not Regular)</div>
             <p className={`text-xs mt-1 ${selectedDemo === 'rhombus-nonreg' ? 'text-rose-100' : 'text-slate-500'}`}>
               ✓ Sides all equal, but ✗ angles are different sizes.
             </p>
@@ -139,7 +139,7 @@ export const RegularPolygonConcept: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-bold text-lg">
-        Golden rule: A polygon is ONLY regular when both conditions are satisfied!
+        <span>A polygon is regular only when both conditions are satisfied: all sides equal and all angles equal.</span>
       </div>
     </div>
   );

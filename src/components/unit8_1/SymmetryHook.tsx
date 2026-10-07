@@ -171,7 +171,7 @@ export const SymmetryHook: React.FC = () => {
         {/* Object Picker Tiles */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="text-sm font-extrabold uppercase tracking-wider text-slate-500 px-1">
-            Tap an object to explore:
+            Everyday Examples
           </span>
           {items.map((item) => (
             <button
@@ -193,11 +193,6 @@ export const SymmetryHook: React.FC = () => {
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Classroom Prompt */}
-      <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-between text-blue-950 font-bold text-lg">
-        <span>Teacher prompt: "If we fold along the dashed mirror line, do the two halves land exactly on top of each other?"</span>
       </div>
     </div>
   );

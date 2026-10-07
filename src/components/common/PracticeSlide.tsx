@@ -184,10 +184,6 @@ export const PracticeSlide: React.FC<PracticeSlideProps> = ({
               </div>
             )}
           </div>
-
-          <div className="pt-4 border-t border-slate-200 text-xs font-bold text-slate-400">
-            Cambridge Stage 7 Practice · Teacher solves live on the whiteboard
-          </div>
         </div>
 
         {/* Right: 60% Working Space */}
@@ -195,10 +191,7 @@ export const PracticeSlide: React.FC<PracticeSlideProps> = ({
           {/* Header indicator */}
           <div className="h-12 border-b border-slate-200 px-6 flex items-center justify-between bg-slate-50/80 z-10">
             <span className="text-sm font-extrabold uppercase tracking-widest text-slate-600">
-              Teacher Working Space (Live Whiteboard)
-            </span>
-            <span className="text-xs font-bold text-slate-400">
-              Use Pen, Line, or Eraser to write &amp; solve live
+              Working Space
             </span>
           </div>
 

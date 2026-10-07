@@ -157,7 +157,7 @@ export const RotationalSymmetryDemo: React.FC = () => {
           {/* Shape Selector */}
           <div>
             <span className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2 block">
-              Choose Shape:
+              Shapes:
             </span>
             <div className="grid grid-cols-2 gap-2">
               {shapes.map((s) => (
@@ -235,7 +235,7 @@ export const RotationalSymmetryDemo: React.FC = () => {
           {/* Quick Match Snap Buttons */}
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
             <span className="text-xs font-black uppercase text-slate-500 block mb-2">
-              Match Angles for this Shape:
+              Angles of Match:
             </span>
             <div className="flex gap-2 flex-wrap">
               {currentShape.matchAngles.map((ang) => (
@@ -260,7 +260,7 @@ export const RotationalSymmetryDemo: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 font-bold text-lg">
-        Classroom note: The red reference dot shows how far the shape has turned! An orange dot marks the centre of rotation.
+        <span>The red dot shows the rotation angle. The orange dot marks the centre of rotation.</span>
       </div>
     </div>
   );

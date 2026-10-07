@@ -194,14 +194,14 @@ export const Patterns81: React.FC = () => {
             </div>
           </div>
 
-          {/* Teacher Reveal Toggles */}
+          {/* Buttons */}
           <div className="flex items-center gap-3 mt-4">
             <button
               onClick={() => setRevealedLines(!revealedLines)}
               className="h-12 px-5 rounded-xl bg-slate-900 text-white font-black text-sm flex items-center gap-2 active:scale-95"
             >
               {revealedLines ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              <span>{revealedLines ? 'Hide Lines' : 'Reveal Lines'}</span>
+              <span>{revealedLines ? 'Hide Lines' : 'Show Lines'}</span>
             </button>
 
             <button
@@ -209,7 +209,7 @@ export const Patterns81: React.FC = () => {
               className="h-12 px-5 rounded-xl bg-blue-600 text-white font-black text-sm flex items-center gap-2 active:scale-95"
             >
               {revealedOrder ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              <span>{revealedOrder ? 'Hide Order' : 'Reveal Order'}</span>
+              <span>{revealedOrder ? 'Hide Order' : 'Show Order'}</span>
             </button>
 
             <button
@@ -217,7 +217,7 @@ export const Patterns81: React.FC = () => {
               className="h-12 px-5 rounded-xl bg-emerald-600 text-white font-black text-sm flex items-center gap-2 active:scale-95"
             >
               <RotateCw className="w-4 h-4" />
-              <span>Rotate Step ({rotationAngle}°)</span>
+              <span>Rotate ({rotationAngle}°)</span>
             </button>
           </div>
         </div>
@@ -225,7 +225,7 @@ export const Patterns81: React.FC = () => {
         {/* Pattern Chooser */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="text-xs font-black uppercase tracking-wider text-slate-500">
-            Select Pattern:
+            Patterns:
           </span>
           {patterns.map((p) => (
             <button
@@ -252,7 +252,7 @@ export const Patterns81: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 font-bold text-lg">
-        Worked demonstration: Teacher asks students for guesses first, then reveals lines and order!
+        <span>Curved pinwheel blades and recycling arrows produce rotational symmetry without any mirror lines.</span>
       </div>
     </div>
   );

@@ -80,10 +80,7 @@ export const CongruentHook: React.FC = () => {
         {/* Controls */}
         <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
           <div className="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-md">
-            <h3 className="text-2xl font-black text-slate-900 mb-2">Test the Fit</h3>
-            <p className="text-slate-600 font-bold text-base mb-6">
-              Tap "Slide Shape" to see if Shape A lands exactly on top of Shape B with zero gap or overlap.
-            </p>
+            <h3 className="text-2xl font-black text-slate-900 mb-6">Overlay Comparison</h3>
 
             <div className="flex items-center gap-3">
               <button
@@ -108,7 +105,7 @@ export const CongruentHook: React.FC = () => {
       </div>
 
       <div className="p-4 rounded-2xl bg-orange-50 border border-orange-200 text-orange-950 font-bold text-lg">
-        Cambridge definition: When two shapes fit exactly on top of each other, we say they are CONGRUENT.
+        <span>When two shapes fit exactly on top of each other, we say they are CONGRUENT.</span>
       </div>
     </div>
   );

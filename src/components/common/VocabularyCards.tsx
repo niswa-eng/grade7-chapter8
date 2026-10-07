@@ -25,9 +25,6 @@ export const VocabularyCards: React.FC<VocabularyCardsProps> = ({ terms, title }
             {title}
           </h2>
         </div>
-        <div className="text-sm font-bold text-slate-500 bg-white px-4 py-2 rounded-xl border border-slate-200">
-          Tap any card to flip &amp; reveal definition
-        </div>
       </div>
 
       {/* Grid of Cards */}
@@ -39,7 +36,7 @@ export const VocabularyCards: React.FC<VocabularyCardsProps> = ({ terms, title }
             <div
               key={item.term}
               onClick={() => toggleFlip(idx)}
-              className={`min-h-[200px] rounded-3xl p-6 transition-all duration-300 cursor-pointer border-2 relative flex flex-col justify-between active:scale-98 shadow-md ${
+              className={`min-h-[190px] rounded-3xl p-6 transition-all duration-300 cursor-pointer border-2 relative flex flex-col justify-between active:scale-98 shadow-md ${
                 isFlipped
                   ? 'bg-slate-900 text-white border-slate-800 shadow-xl'
                   : 'bg-white hover:bg-slate-50 text-slate-900 border-slate-200 hover:border-blue-400'
@@ -50,7 +47,7 @@ export const VocabularyCards: React.FC<VocabularyCardsProps> = ({ terms, title }
                 <span className={`text-xs font-black uppercase tracking-wider px-2.5 py-1 rounded-lg ${
                   isFlipped ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
                 }`}>
-                  {isFlipped ? 'Definition' : 'Term # ' + (idx + 1)}
+                  {isFlipped ? 'Definition' : 'Term ' + (idx + 1)}
                 </span>
                 <RotateCw className={`w-5 h-5 transition-transform ${isFlipped ? 'text-amber-400 rotate-180' : 'text-slate-400'}`} />
               </div>
@@ -59,12 +56,9 @@ export const VocabularyCards: React.FC<VocabularyCardsProps> = ({ terms, title }
               <div className="my-auto py-2">
                 {!isFlipped ? (
                   <div>
-                    <h3 className="text-2xl font-black text-slate-900 leading-tight mb-2">
+                    <h3 className="text-2xl font-black text-slate-900 leading-tight">
                       {item.term}
                     </h3>
-                    <p className="text-sm font-semibold text-slate-500">
-                      Tap card to see meaning &amp; example
-                    </p>
                   </div>
                 ) : (
                   <div>
@@ -80,13 +74,6 @@ export const VocabularyCards: React.FC<VocabularyCardsProps> = ({ terms, title }
                     </div>
                   </div>
                 )}
-              </div>
-
-              {/* Bottom hint */}
-              <div className={`text-xs font-bold pt-2 border-t ${
-                isFlipped ? 'border-white/15 text-slate-400' : 'border-slate-100 text-slate-400'
-              }`}>
-                {isFlipped ? 'Tap to flip back' : 'Tap to reveal definition'}
               </div>
             </div>
           );

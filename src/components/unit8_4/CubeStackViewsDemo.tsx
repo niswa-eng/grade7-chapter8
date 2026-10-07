@@ -146,7 +146,7 @@ export const CubeStackViewsDemo: React.FC = () => {
           Views of Cube Stacks &amp; Models
         </h2>
         <p className="text-2xl font-bold text-slate-700 leading-snug">
-          The app computes <span className="text-blue-600 font-extrabold">Front</span>, <span className="text-emerald-600 font-extrabold">Side</span>, and <span className="text-purple-600 font-extrabold">Plan</span> views automatically. Add or remove cubes to test!
+          Orthographic projections of 3D cube models: <span className="text-blue-600 font-extrabold">Front</span>, <span className="text-emerald-600 font-extrabold">Side</span>, and <span className="text-purple-600 font-extrabold">Plan</span> views.
         </p>
       </div>
 
@@ -263,10 +263,10 @@ export const CubeStackViewsDemo: React.FC = () => {
             </div>
           </div>
 
-          {/* Teacher Height Control Matrix */}
+          {/* Height Control Matrix */}
           <div className="bg-white rounded-3xl p-4 border-2 border-slate-200 shadow-md">
             <span className="text-xs font-black uppercase text-slate-500 block mb-2">
-              Adjust Heights on Grid (Back Row &amp; Front Row):
+              Grid Heights (Back &amp; Front):
             </span>
             <div className="grid grid-cols-3 gap-2 text-center">
               {[0, 1].map((r) =>
@@ -299,7 +299,7 @@ export const CubeStackViewsDemo: React.FC = () => {
       </div>
 
       <div className="p-3 rounded-2xl bg-purple-50 border border-purple-200 text-purple-950 font-bold text-base mt-2">
-        Notice: Front view height = highest cube in that column! Side view height = highest cube in that row as seen from the right!
+        <span>Front view height is the maximum height in that column. Side view height is the maximum height in that row.</span>
       </div>
     </div>
   );

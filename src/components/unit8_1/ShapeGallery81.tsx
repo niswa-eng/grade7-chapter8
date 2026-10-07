@@ -39,7 +39,7 @@ export const ShapeGallery81: React.FC = () => {
             }`}
           >
             <Layers className="w-4 h-4" />
-            <span>Interactive Shape Demo</span>
+            <span>Interactive View</span>
           </button>
           <button
             onClick={() => setActiveTab('table')}
@@ -50,7 +50,7 @@ export const ShapeGallery81: React.FC = () => {
             }`}
           >
             <Table className="w-4 h-4" />
-            <span>All 10 Shapes Table</span>
+            <span>Summary Table</span>
           </button>
         </div>
       </div>
@@ -179,7 +179,7 @@ export const ShapeGallery81: React.FC = () => {
           {/* Shape Picker Grid (All 10 shapes) */}
           <div className="col-span-12 lg:col-span-5 flex flex-col gap-2">
             <span className="text-xs font-black uppercase tracking-wider text-slate-500 px-1">
-              Select Shape from Cambridge 10:
+              2D Shapes:
             </span>
             <div className="grid grid-cols-2 gap-2">
               {shapes8_1_gallery.map((s) => (
@@ -207,9 +207,6 @@ export const ShapeGallery81: React.FC = () => {
       ) : (
         /* Summary Table Slide */
         <div className="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-xl my-auto overflow-hidden">
-          <div className="text-sm font-bold text-slate-500 mb-3">
-            Tap any row to select and highlight that shape.
-          </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
@@ -253,9 +250,8 @@ export const ShapeGallery81: React.FC = () => {
         </div>
       )}
 
-      {/* Classroom Prompt */}
       <div className="p-3 rounded-2xl bg-blue-50 border border-blue-200 text-blue-950 font-bold text-base mt-2">
-        Notice: Parallelogram has order 2 but 0 lines of symmetry. Order 1 means NO rotational symmetry!
+        A parallelogram has order 2 rotational symmetry and 0 lines of symmetry. Order 1 means no rotational symmetry.
       </div>
     </div>
   );

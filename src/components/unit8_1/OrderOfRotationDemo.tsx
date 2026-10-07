@@ -85,7 +85,7 @@ export const OrderOfRotationDemo: React.FC = () => {
         {/* Order Selector Buttons */}
         <div>
           <span className="text-xs font-black uppercase tracking-wider text-slate-500 mb-2 block">
-            Tap an Order to Inspect:
+            Order of Symmetry:
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
             {orderExamples.map((item) => (
@@ -108,12 +108,12 @@ export const OrderOfRotationDemo: React.FC = () => {
         </div>
       </div>
 
-      {/* Critical Cambridge Teaching Misconception Warning */}
+      {/* Critical Rule Warning */}
       <div className="p-4 rounded-2xl bg-amber-50 border-2 border-amber-300 flex items-start gap-4 text-amber-950">
         <AlertTriangle className="w-8 h-8 text-amber-600 shrink-0 mt-0.5" />
         <div className="text-lg font-bold leading-snug">
-          <span className="font-extrabold uppercase text-amber-900">Key Cambridge Rule: </span>
-          Every single shape matches once at 360° (full turn). Therefore, every shape has at least order 1.
+          <span className="font-extrabold uppercase text-amber-900">Important Rule: </span>
+          Every shape matches once at 360° (full turn), so every shape has at least order 1.
           <span className="text-rose-700 font-black"> Order 1 means it has NO rotational symmetry!</span>
         </div>
       </div>
