@@ -140,11 +140,11 @@ export const shapes8_1_gallery: ShapeSymmetryData[] = [
     order: 3,
     orderDescription: 'Order 3 (matches every 120°: 120°, 240°, 360°)',
     anglesOfMatch: [120, 240, 360],
-    polygonPoints: [[150, 45], [260, 240], [40, 240]],
+    polygonPoints: [[150, 55], [232.3, 197.5], [67.7, 197.5]],
     mirrorLines: [
-      { x1: 150, y1: 25, x2: 150, y2: 260, label: 'Vertical' },
-      { x1: 260, y1: 240, x2: 95, y2: 142.5, label: 'Vertex 2 to opposite' },
-      { x1: 40, y1: 240, x2: 205, y2: 142.5, label: 'Vertex 3 to opposite' }
+      { x1: 150, y1: 25, x2: 150, y2: 250, label: 'Vertical' },
+      { x1: 255, y1: 210, x2: 45, y2: 90, label: 'Vertex 2 to opposite' },
+      { x1: 45, y1: 210, x2: 255, y2: 90, label: 'Vertex 3 to opposite' }
     ]
   },
   {
@@ -166,7 +166,7 @@ export const shapes8_1_gallery: ShapeSymmetryData[] = [
     order: 1,
     orderDescription: 'Order 1 (matches only at full turn 360° - NO rotational symmetry)',
     anglesOfMatch: [360],
-    polygonPoints: [[85, 55], [265, 185], [45, 245]],
+    polygonPoints: [[120, 65], [235, 170], [95, 215]],
     mirrorLines: []
   },
   {

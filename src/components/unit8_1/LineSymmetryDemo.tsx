@@ -166,12 +166,14 @@ export const LineSymmetryDemo: React.FC = () => {
               <g
                 style={{
                   transformOrigin: '150px 150px',
-                  transform: `rotate(${foldProgress * 90}deg) scale(${1 - 0.2 * Math.sin(foldProgress * Math.PI)})`,
+                  transform: `rotate(45deg) scaleY(${1 - 2 * foldProgress}) rotate(-45deg)`,
                   opacity: 0.9
                 }}
               >
-                {/* Triangle half */}
+                {/* Triangle half: folds across diagonal line y = x */}
                 <polygon points="60,60 240,60 240,240" fill="#93c5fd" stroke="#1d4ed8" strokeWidth="4" />
+                {/* Corner guide marker */}
+                <circle cx="240" cy="60" r="5" fill="#f59e0b" stroke="#ffffff" strokeWidth="1.5" />
               </g>
             )}
 

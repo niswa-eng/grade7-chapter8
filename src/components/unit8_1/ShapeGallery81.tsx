@@ -11,9 +11,31 @@ export const ShapeGallery81: React.FC = () => {
   const shape = shapes8_1_gallery.find((s) => s.name === selectedShapeName) || shapes8_1_gallery[0];
 
   const handleRotateStep = () => {
-    const step = shape.order === 999 ? 45 : 360 / Math.max(1, shape.order);
-    setRotationAngle((prev) => (prev + step) % 360);
+    if (shape.order === 1) {
+      // Order 1: animate full 360° rotation
+      if (rotationAngle >= 360) {
+        setRotationAngle(0);
+        setTimeout(() => {
+          setRotationAngle(360);
+        }, 60);
+      } else {
+        setRotationAngle(360);
+      }
+      return;
+    }
+    const step = shape.order === 999 ? 45 : 360 / shape.order;
+    setRotationAngle((prev) => {
+      const next = prev + step;
+      return next > 360 ? step : next;
+    });
   };
+
+  const normAngle = rotationAngle % 360;
+  const isMatch =
+    rotationAngle === 0 ||
+    rotationAngle === 360 ||
+    normAngle === 0 ||
+    shape.anglesOfMatch.some((a) => Math.abs(normAngle - a) < 2 || Math.abs(rotationAngle - a) < 2);
 
   return (
     <div className="w-full h-full flex flex-col justify-between max-w-6xl mx-auto p-6 select-none overflow-y-auto">
@@ -76,7 +98,7 @@ export const ShapeGallery81: React.FC = () => {
               <svg viewBox="0 0 300 300" className="w-full h-full overflow-visible">
                 {/* Ghost original outline if rotated */}
                 {rotationAngle > 0 && (
-                  <g opacity="0.3">
+                  <g opacity="0.32">
                     {shape.isCircle ? (
                       <circle cx="150" cy="150" r="105" fill="#f8fafc" stroke="#64748b" strokeWidth="4" />
                     ) : (
@@ -87,6 +109,18 @@ export const ShapeGallery81: React.FC = () => {
                         strokeWidth="4"
                       />
                     )}
+                    {/* Ghost pin ring */}
+                    {!shape.isCircle && shape.polygonPoints[0] && (
+                      <circle
+                        cx={shape.polygonPoints[0][0]}
+                        cy={shape.polygonPoints[0][1]}
+                        r="6"
+                        fill="none"
+                        stroke="#dc2626"
+                        strokeWidth="2"
+                        strokeDasharray="2 2"
+                      />
+                    )}
                   </g>
                 )}
 
@@ -95,23 +129,41 @@ export const ShapeGallery81: React.FC = () => {
                   style={{
                     transformOrigin: '150px 150px',
                     transform: `rotate(${rotationAngle}deg)`,
-                    transition: 'transform 0.3s ease-out'
+                    transition:
+                      rotationAngle === 0
+                        ? 'none'
+                        : `transform ${shape.order === 1 ? '2.4s' : '1.3s'} cubic-bezier(0.25, 1, 0.5, 1)`
                   }}
                 >
                   {shape.isCircle ? (
-                    <circle cx="150" cy="150" r="105" fill="#dbeafe" stroke="#1d4ed8" strokeWidth="4" />
+                    <circle
+                      cx="150"
+                      cy="150"
+                      r="105"
+                      fill={isMatch ? '#bbf7d0' : '#dbeafe'}
+                      stroke={isMatch ? '#15803d' : '#1d4ed8'}
+                      strokeWidth="4"
+                    />
                   ) : (
                     <polygon
                       points={shape.polygonPoints.map((p) => p.join(',')).join(' ')}
-                      fill="#dbeafe"
-                      stroke="#1d4ed8"
+                      fill={isMatch ? '#bbf7d0' : '#dbeafe'}
+                      stroke={isMatch ? '#15803d' : '#1d4ed8'}
                       strokeWidth="4"
+                      strokeLinejoin="round"
                     />
                   )}
 
                   {/* Corner indicator */}
                   {!shape.isCircle && shape.polygonPoints[0] && (
-                    <circle cx={shape.polygonPoints[0][0]} cy={shape.polygonPoints[0][1]} r="6" fill="#dc2626" />
+                    <circle
+                      cx={shape.polygonPoints[0][0]}
+                      cy={shape.polygonPoints[0][1]}
+                      r="6.5"
+                      fill="#dc2626"
+                      stroke="#ffffff"
+                      strokeWidth="1.5"
+                    />
                   )}
                 </g>
 
@@ -138,7 +190,7 @@ export const ShapeGallery81: React.FC = () => {
               </svg>
             </div>
 
-            {/* Teaching Description */}
+            {/* Description Card */}
             <div className="w-full mt-3 p-3 bg-slate-50 rounded-2xl border border-slate-200 text-sm font-bold text-slate-700 text-center">
               {shape.linesDescription} · {shape.orderDescription}
             </div>
@@ -154,7 +206,7 @@ export const ShapeGallery81: React.FC = () => {
                 }`}
               >
                 <Eye className="w-4 h-4" />
-                <span>{showMirrorLines ? 'Hide Mirror Lines' : 'Show Mirror Lines'}</span>
+                <span>{showMirrorLines ? 'Hide Lines' : 'Show Lines'}</span>
               </button>
 
               <button
@@ -162,13 +214,17 @@ export const ShapeGallery81: React.FC = () => {
                 className="h-12 px-5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm flex items-center gap-2 shadow-md active:scale-95"
               >
                 <RotateCw className="w-4 h-4" />
-                <span>Step Rotate ({rotationAngle}°)</span>
+                <span>{shape.order === 1 ? 'Test Full Turn (360°)' : 'Step Rotate'}</span>
+                <span className="font-mono text-xs px-2 py-0.5 rounded-lg bg-white/20">
+                  {shape.order === 1 && rotationAngle >= 360 ? '360°' : `${normAngle === 0 && rotationAngle > 0 ? 360 : normAngle}°`}
+                </span>
               </button>
 
               {rotationAngle > 0 && (
                 <button
                   onClick={() => setRotationAngle(0)}
-                  className="h-12 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm"
+                  className="h-12 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm border border-slate-200 active:scale-95"
+                  title="Reset angle"
                 >
                   Reset
                 </button>
